@@ -1,0 +1,6 @@
+.idea
+node_modules
+flow-builder.iml
+clear20-frontend.iml
+.env
+dist

@@ -1,0 +1,40 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    @apply mx-auto;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.react-flow__node.selected {
+    @apply border border-secondary rounded
+}
+
+.loader div {
+    animation-duration: 0.5s;
+}
+
+.loader div:first-child {
+    animation-delay: 0.1s;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: 0.6s;
+}

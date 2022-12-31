@@ -1,0 +1,1 @@
+export const Home = () => <h1 className="text-red-400">I'm home</h1>

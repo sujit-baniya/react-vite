@@ -1,0 +1,1 @@
+export const Dashboard = () => <h1 className="text-blue-400">I'm dashboard</h1>

@@ -22,7 +22,7 @@ root.render(
                         <title>Test App</title>
                     </Helmet>
                     <AuthProvider>
-                        <Routes/>
+                        <Routes theme="theme-1"/>
                     </AuthProvider>
                 </HelmetProvider>
             </ErrorBoundary>

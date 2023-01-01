@@ -14,7 +14,7 @@ interface ResetPasswordTypes {
     password: string
 }
 
-export default function ResetPassword() {
+export const ResetPassword = () => {
     const navigate = useNavigate()
     const [searchParams] = useSearchParams('')
     const token = searchParams.get('recovery_token') as string
@@ -111,3 +111,5 @@ export default function ResetPassword() {
         </main>
     )
 }
+
+export default ResetPassword

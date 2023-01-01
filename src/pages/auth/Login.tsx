@@ -15,7 +15,7 @@ interface LoginTypes {
     password: string
 }
 
-export default function Login() {
+export const Login = () => {
     const {login, loggedOut} = useAuthentication()
     const [failed, setFailed] = useState<string | null>()
     const {
@@ -94,3 +94,5 @@ export default function Login() {
         </main>
     )
 }
+
+export default Login

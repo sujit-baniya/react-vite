@@ -2,6 +2,7 @@ import {useRoutes} from 'react-router-dom'
 import {lazily} from "~/packages/lazily";
 import { getThemeByKey } from "~/theme";
 import { withLoggedIn, withLoggedOut } from "~/core/hooks/auth/Context";
+import { useThemeStore } from "~/core/stores/theme-store";
 
 const {Home} = lazily(() => import("~/pages/Home"));
 const {Dashboard} = lazily(() => import("~/pages/Dashboard"));
@@ -10,16 +11,16 @@ const {Recovery} = lazily(() => import("~/pages/auth/Recovery"));
 const {ResetPassword} = lazily(() => import("~/pages/auth/ResetPassword"));
 
 export const Routes = ({theme = "default"}) => {
-    theme = theme || "default"
+    theme = theme || 'default'
     const [currentTheme, setCurrentTheme] = useState(getThemeByKey(theme));
-    // @ts-ignore
-    const AuthLayout = currentTheme.authLayout
-    // @ts-ignore
-    const AppLayout = currentTheme.appLayout
+    const [Layouts, setLayouts] = useState({
+        AuthLayout: currentTheme.authLayout,
+        AppLayout: currentTheme.appLayout,
+    })
     return useRoutes([
         {path: '/', element: <Home/>},
         {
-            element: <AuthLayout/>,
+            element: <Layouts.AuthLayout/>,
             children: [
                 {path: 'login', element: withLoggedOut(Login)()},
                 {path: 'recovery', element: withLoggedOut(Recovery)()},
@@ -27,7 +28,7 @@ export const Routes = ({theme = "default"}) => {
             ],
         },
         {
-            element: <AppLayout/>,
+            element: <Layouts.AppLayout/>,
             children: [
                 {path: '/dashboard', element: withLoggedIn(Dashboard)()},
             ]

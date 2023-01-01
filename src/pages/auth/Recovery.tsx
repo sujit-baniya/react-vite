@@ -12,7 +12,7 @@ interface PasswordRecoveryTypes {
     email: string
 }
 
-export default function Recovery() {
+export const Recovery = () => {
     const [success, setSuccess] = useState<string | null>()
     const [failed, setFailed] = useState<string | null>()
 
@@ -74,3 +74,5 @@ export default function Recovery() {
         </main>
     )
 }
+
+export default Recovery

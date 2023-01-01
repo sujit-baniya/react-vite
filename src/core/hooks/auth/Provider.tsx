@@ -38,7 +38,7 @@ class Auth {
         return HttpClient.post(this.getLogoutUrl())
     }
 
-    setUser(user?: any) {
+    setAuthUser(user?: any) {
         this.user = user
     }
 
@@ -84,7 +84,7 @@ export const Provider = ({children}: { children?: ReactNode }) => {
     const navigate = useNavigate()
     const userStore = useUserStore()
     if (userStore.user && !auth.currentUser()) {
-        auth.setUser(userStore.user)
+        auth.setAuthUser(userStore.user)
     }
     const user = auth.currentUser()
     const [loggedIn, setLoggedIn] = useState(!!user)
@@ -93,7 +93,7 @@ export const Provider = ({children}: { children?: ReactNode }) => {
 
     // This methods would communicate with a backend, obtain/verify a token, etc.
     const login = (user ?: User) => {
-        auth.setUser(Object.setPrototypeOf(user, User.prototype))
+        auth.setAuthUser(Object.setPrototypeOf(user, User.prototype))
         userStore.setUser(Object.setPrototypeOf(user, User.prototype))
         setLoggedIn(true)
         setLoggedOut(false)
@@ -109,7 +109,7 @@ export const Provider = ({children}: { children?: ReactNode }) => {
             .then((_response: any) => {
                 setLoggedIn(false)
                 setLoggedOut(true)
-                auth.setUser(null)
+                auth.setAuthUser(null)
                 userStore.setUser(null)
                 navigate('/login?loggedOut=true')
             })

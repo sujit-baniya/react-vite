@@ -80,7 +80,7 @@ export const DefaultUserContext: AuthContext = {
 
 export const UserContext = createContext(DefaultUserContext)
 
-export const AuthProvider = ({children}: { children?: ReactNode }) => {
+export const Provider = ({children}: { children?: ReactNode }) => {
     const navigate = useNavigate()
     const userStore = useUserStore()
     if (userStore.user && !auth.currentUser()) {
@@ -129,4 +129,4 @@ export function useAuthentication() {
     return useContext(UserContext)
 }
 
-export default AuthProvider
+export default Provider

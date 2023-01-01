@@ -1,4 +1,4 @@
-import { lazy } from 'react'
+import {lazy} from 'react'
 
 export const lazily = <T extends {}, U extends keyof T>(
     loader: (x?: string) => Promise<T>

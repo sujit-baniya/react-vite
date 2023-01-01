@@ -17,6 +17,7 @@ specifiers:
   '@unocss/transformer-variant-group': ^0.48.0
   '@vitejs/plugin-react-swc': ^3.0.1
   axios: ^1.2.2
+  clsx: ^1.2.1
   crypto-js: ^4.1.1
   dayjs: ^1.11.7
   eslint: ^8.31.0
@@ -27,6 +28,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-fast-compare: ^3.2.0
+  react-hook-form: ^7.41.3
   react-icons: ^4.7.1
   react-router: ^6.6.1
   react-router-dom: ^6.6.1
@@ -43,6 +45,7 @@ specifiers:
 dependencies:
   '@loadable/component': 5.15.2_react@18.2.0
   axios: 1.2.2
+  clsx: 1.2.1
   crypto-js: 4.1.1
   dayjs: 1.11.7
   invariant: 2.2.4
@@ -50,6 +53,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-fast-compare: 3.2.0
+  react-hook-form: 7.41.3_react@18.2.0
   react-icons: 4.7.1_react@18.2.0
   react-router: 6.6.1_react@18.2.0
   react-router-dom: 6.6.1_biqbaboplfbrettd7655fr4n2y
@@ -1515,6 +1519,11 @@ packages:
     dependencies:
       escape-string-regexp: 1.0.5
     dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -3456,6 +3465,15 @@ packages:
 
   /react-fast-compare/3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
+    dev: false
+
+  /react-hook-form/7.41.3_react@18.2.0:
+    resolution: {integrity: sha512-5QNTmqJtDb88WV5n41b6+AmcDMVyaJ3tccPgHAgS215w3jZ3bmJhDO27kNTr8u4YHNYXmS7p1/4/KachBAlUtw==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-icons/4.7.1_react@18.2.0:

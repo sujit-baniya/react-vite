@@ -2,7 +2,7 @@
 import {type FunctionComponent} from 'react'
 import {Navigate} from 'react-router-dom'
 
-import {useAuthentication} from './AuthProvider'
+import {useAuthentication} from './Provider'
 
 /**
  * A higher-order wrapper for the conditional route component

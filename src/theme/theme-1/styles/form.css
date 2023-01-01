@@ -13,7 +13,7 @@ input[type='email'],
 input[type='search'],
 input[type='tel'],
 input[type='datetime-local'],
-textarea,select {
+textarea, select {
     @apply w-full p-2 border border-zinc-300 rounded;
 }
 

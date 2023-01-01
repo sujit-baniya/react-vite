@@ -16,7 +16,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
     (requestConfig) => {
         let time = ((Date.now() % 1000) / 1000) * 1000000
-        if(requestConfig.headers) {
+        if (requestConfig.headers) {
             requestConfig.headers['x-request-id'] = encrypt(time.toString(), import.meta.env.VITE_SECRET)
         }
         return requestConfig

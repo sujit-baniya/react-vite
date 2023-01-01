@@ -38,7 +38,7 @@ class Auth {
         return HttpClient.post(this.getLogoutUrl())
     }
 
-    setUser(user?: User) {
+    setUser(user?: any) {
         this.user = user
     }
 
@@ -68,10 +68,14 @@ type AuthContext = {
 }
 
 export const DefaultUserContext: AuthContext = {
+    login(user: User | undefined): void {
+    },
+    logout(): void {
+    },
     user: null,
     loggedIn: false,
     loggedOut: false,
-    isAdmin: false,
+    isAdmin: false
 }
 
 export const UserContext = createContext(DefaultUserContext)

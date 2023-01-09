@@ -7,7 +7,6 @@ import 'uno.css'
 
 const AuthProvider = lazy(() => import("~/core/hooks/auth/Provider"));
 const Routes = lazy(() => import("~/routes"));
-import reportWebVitals from './reportWebVitals'
 import {Helmet, HelmetProvider} from "~/packages/helmet";
 import { ErrorBoundary } from "~/core/components/ErrorBoundary";
 
@@ -22,12 +21,10 @@ root.render(
                         <title>Test App</title>
                     </Helmet>
                     <AuthProvider>
-                        <Routes theme="theme-1"/>
+                        <Routes/>
                     </AuthProvider>
                 </HelmetProvider>
             </ErrorBoundary>
         </HashRouter>
     </StrictMode>
 )
-
-reportWebVitals()

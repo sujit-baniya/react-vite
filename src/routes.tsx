@@ -2,7 +2,6 @@ import {useRoutes} from 'react-router-dom'
 import {lazily} from "~/packages/lazily";
 import { getThemeByKey } from "~/theme";
 import { withLoggedIn, withLoggedOut } from "~/core/hooks/auth/Context";
-import { useThemeStore } from "~/core/stores/theme-store";
 
 const {Home} = lazily(() => import("~/pages/Home"));
 const {Dashboard} = lazily(() => import("~/pages/Dashboard"));

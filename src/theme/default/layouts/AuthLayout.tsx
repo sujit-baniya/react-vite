@@ -1,5 +1,6 @@
 import {Outlet} from 'react-router-dom'
 import {Suspense} from "react";
+import {Loading} from "~/core/components/Loading";
 
 export const AuthLayout = () => {
     return (
@@ -7,7 +8,7 @@ export const AuthLayout = () => {
             <Suspense
                 fallback={
                     <div className="fixed top-0 h-screen w-screen grid place-items-center">
-                        <div>Loading</div>
+                        <Loading/>
                     </div>
                 }
             >

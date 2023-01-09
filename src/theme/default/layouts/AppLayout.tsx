@@ -1,5 +1,7 @@
 import {Outlet} from 'react-router-dom'
 import {Suspense} from "react";
+import {Loading} from "~/core/components/Loading";
+import '../styles/form.css'
 
 export const AppLayout = () => {
     return (
@@ -8,7 +10,7 @@ export const AppLayout = () => {
                 <Suspense
                     fallback={
                         <div className="fixed top-0 h-screen w-screen grid place-items-center">
-                            <div>Loading</div>
+                            <Loading/>
                         </div>
                     }
                 >
